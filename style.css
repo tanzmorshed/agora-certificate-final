@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.top-pane{
+    background-color: white;
+    width: 100vw;
+    /* height */
+}
+/* for a background thing #container{} */
+.logo{
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.loginContainer{
+    margin: 10vh auto 10vh auto;
+    width: 40vw;
+    padding-left: 5vw;
+}
+
+#username {
+    margin-top: 20px;
+}
+
+input{
+    margin-top: 10px;
+    padding: 5px;
+    width: 90%;
+    font-size: 1.5rem;
+    border: 2px solid yellow;
+    border-radius: 5px;
+}
+
+.loginButton{
+    background-color: yellow;
+    margin-top: 10px;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+#flexContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.invalid{
+    border: 2px solid red;
+}

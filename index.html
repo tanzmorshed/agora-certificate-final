@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- insert fonts here -->
+    </head>
+    <body id= "container">
+        <div id = "flexContainer">
+            <div class = "top-pane"></div>
+            <div class="logo"></div>
+            <img src="" alt=""> <!-- find a picture lmao-->
+        </div>
+        <div class="loginContainer">
+            <span id="heading">Log in for free, live <strong>makeup tutorials</strong> </span>
+            <form action="./index.html" onsubmit = "return false">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder ="Password">
+                <button class="loginButton" onclick="loginSuccess()">Login</button>
+            </form>
+        </div>
+        <!-- maybe add more stuff here i don't know-->
+        <script>
+            function loginSuccess() {
+                let username = document.getElementById("username")
+                let password = document.getElementById("password")
+
+                if(username.value == "") username.className = "invalid"
+                else username.className = ""
+
+                if(password.value == "") password.className = "invalid"
+                else password.className = ""
+
+                // if successful, redirect to actual video page 
+                if (username.className =="" && password.className == "" )
+                     location.href = "videoCall.html"
+                return true;
+            }
+        </script>
+    </body>
+</html>
