@@ -24,7 +24,7 @@ body{
     margin-top: 20px;
 }
 
-input{
+.loginContainer input{
     margin-top: 10px;
     padding: 5px;
     width: 90%;
@@ -49,4 +49,84 @@ input{
 
 .invalid{
     border: 2px solid red;
+}
+.channelTopBar{
+    width: 100vw;
+    height: 4vh;
+    padding-top: 10px;
+    text-align: center;
+    background-color: darkgreen;
+}
+
+.channelTopBar span{
+    margin-right: 20px;
+}
+
+/*#tutorial*/iframe{
+    margin-top: 40px;
+    justify-self: center;
+    border: 2px solid #099dfd;
+    /*width: 700px;
+    height: 400px;*/
+    text-align: left;
+}
+
+#SelfStream{
+    text-align: right;
+    margin-top: 20px;
+    justify-self: center;
+    width: 400;
+    height: 250;
+    border: 2px solid yellow;
+}
+
+#remoteStream{
+    text-align: left;
+    margin-top: 20px;
+    justify-self: center;
+    border: 2px solid #099dfd;
+    width: 400px;
+    height: 250px;
+}
+
+.controls{
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    height: 100px;
+    width: 600px;
+    background-color: #ffffff;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.13);
+}
+
+.icon {
+    height: 40px;
+    width: 50px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.bottom-container{
+    margin-top: 5vh;
+}
+.left-pane{
+    width: 20vw;
+    text-align: center;
+    float: left;
+}
+.tutorial-pane{
+    /*margin-left: 20vw;*/
+    width: 700px;
+    float: left;
+    margin: 0;
+}
+.video-pane{
+    float: right;
+    margin-right: 20px;
 }
