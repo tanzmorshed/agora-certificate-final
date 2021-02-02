@@ -1,7 +1,7 @@
 let handleFail = function(err){
     console.log(err)
 }
-let appId = "9507e7a38f514fc898caf44ec24f240d"
+let appId = "40fb1c82e7b84b5c94fbe7805b4f1761"
 let globalStream;
 let audioMuted = false;
 let videoMuted = false;
@@ -36,7 +36,14 @@ function addVideoStream(streamId){
 document.getElementById("join").onclick = function () {
     let channelName = document.getElementById("channelName").value;
     let username = document.getElementById("user").value;
-
+    
+    /*let tutorialContainer = document.getElementById("tutorial-pane")
+    let tutorial = document.createElement("iframe")
+    tutorial.width = "700vw"
+    tutorial.height = "400vh"
+    tutorial.src = "https://www.youtube.com/embed/nf8ySuesAPg"
+    tutorial.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    tutorialContainer.appendChild(tutorial); */
     client.join(
         null,
         channelName,
@@ -48,7 +55,7 @@ document.getElementById("join").onclick = function () {
             })
 
             localStream.init(function() {
-                localStream.play("SelfStream")
+                localStream.play("selfStream")
                 console.log('App id: ${appId}\nChannel id: ${channelName}')
                 client.publish(localStream)
             })
