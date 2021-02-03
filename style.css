@@ -90,6 +90,11 @@ body{
 
 .left-pane span{
     color: #001858;
+    margin-bottom: 20px;
+}
+#products{
+    text-emphasis: bold;
+    font-size: 1.5rem;
 }
 /*#tutorial*/iframe{
     margin-top: 40px;
@@ -97,17 +102,19 @@ body{
     
     /*width: 700px;
     height: 400px;*/
-    text-align: left;
+    
 }
 
 #selfStream{
     text-align: right;
     margin-top: 20px;
     justify-self: center;
-    width: 400;
+    width: 600;
     height: 250;
-    border: 2px solid #172c66;
+    border: 2px solid #f3d2c1;
     border-radius: 4px;
+    margin-right: 20px;
+
 }
 
 #remoteStream{
@@ -116,25 +123,25 @@ body{
     justify-self: center;
     border: 2px solid #f3d2c1;
     border-radius: 4px;
-    width: 400px;
+    width: 600px;
     height: 250px;
 }
 
 .controls{
     justify-self: end;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-    height: 75px;
-    width: 300px;
-    background-color: #fffffe;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    height: 250px;
+    width: 75px;
+    background-color: #fef6e4;
+    /*border-top-right-radius: 30px;
+    border-top-left-radius: 30px;*/
     box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.13);
 }
 
@@ -149,9 +156,11 @@ body{
     margin-top: 5vh;
 }
 .left-pane{
-    width: 20vw;
+    width: 30vw;
     text-align: center;
     float: left;
+    display: flex;
+    flex-direction: column;
 }
 .tutorial-pane{
     /*margin-left: 20vw;*/
@@ -160,6 +169,32 @@ body{
     margin: 0;
 }
 .video-pane{
-    float: right;
-    margin-right: 20px;
+    float: left;
+    /*margin-right: 20px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 60;
+    margin-bottom: 30;
+    
+}
+
+.face-prods img{
+    width: 50px;
+    height: 50px;
+}
+
+.brow-prods img{
+    width: 50px;
+    height: 50px;
+}
+
+.eye-prods img{
+    width: 50px;
+    height: 50px;
+}
+
+.lip-prods img{
+    width: 50px;
+    height: 50px;
 }
