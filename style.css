@@ -1,10 +1,11 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #fef6e4;
+    font-family: 'Varela', sans-serif;
     
 }
 .top-pane{
-    background-color: white;
     width: 100vw;
     /* height */
 }
@@ -13,11 +14,20 @@ body{
     padding-top: 30px;
     margin: 0 auto;
 }
+.logo img{
+    width: 200px;
+    margin-left: 45vw;
+    margin-right: 45vw;
+}
 
 .loginContainer{
     margin: 10vh auto 10vh auto;
     width: 40vw;
     padding-left: 5vw;
+}
+#heading{
+    color: #001858;
+    font-size: 2rem;
 }
 
 #username {
@@ -29,18 +39,21 @@ body{
     padding: 5px;
     width: 90%;
     font-size: 1.5rem;
-    border: 2px solid yellow;
+    border: 2px solid #f3d2c1;
     border-radius: 5px;
+    background-color: #f3d2c1;
+    font-family: 'Varela', sans-serif;
 }
 
 .loginButton{
-    background-color: yellow;
-    margin-top: 10px;
+    background-color: #8bd3dd;
+    margin-top: 20px;
     padding: 5px 15px 5px 15px;
-    color: white;
+    color: #001858;
     border: none;
     font-size: 1.5rem;
     border-radius: 10px;
+    font-family: 'Varela', sans-serif;
 }
 #flexContainer{
     display: flex;
@@ -55,13 +68,29 @@ body{
     height: 4vh;
     padding-top: 10px;
     text-align: center;
-    background-color: darkgreen;
+    background-color: #8bd3dd;
+    color: #001858;
 }
 
 .channelTopBar span{
     margin-right: 20px;
 }
+.channelTopBar button {
+    font-family: 'Varela', sans-serif;
+    border-radius: 5px;
+    border: 2px;
+}
+#join{
+    background-color: #f3d2c1;
+}
 
+.channelTopBar input{
+    font-family: 'Varela', sans-serif;
+}
+
+.left-pane span{
+    color: #001858;
+}
 /*#tutorial*/iframe{
     margin-top: 40px;
     justify-self: center;
@@ -77,14 +106,16 @@ body{
     justify-self: center;
     width: 400;
     height: 250;
-    border: 2px solid yellow;
+    border: 2px solid #172c66;
+    border-radius: 4px;
 }
 
 #remoteStream{
     text-align: left;
     margin-top: 20px;
     justify-self: center;
-    border: 2px solid #099dfd;
+    border: 2px solid #f3d2c1;
+    border-radius: 4px;
     width: 400px;
     height: 250px;
 }
@@ -101,7 +132,7 @@ body{
     margin-bottom: 0px;
     height: 75px;
     width: 300px;
-    background-color: #ffffff;
+    background-color: #fffffe;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.13);
