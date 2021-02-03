@@ -1,6 +1,7 @@
 let handleFail = function(err){
     console.log(err)
 }
+
 let appId = "40fb1c82e7b84b5c94fbe7805b4f1761"
 let globalStream;
 let audioMuted = false;
@@ -20,8 +21,8 @@ function removeMyVideoStream() {
 function removeVideoStream(evt){
     let stream = evt.stream;
     stream.stop();
-    let remDiv = document.getElementById(stream.getId())
-    remDiv.parentNode.removeChild(remDiv)
+    let removeDiv = document.getElementById(stream.getId())
+    removeDiv.parentNode.removeChild(removeDiv)
 }
 
 function addVideoStream(streamId){
@@ -55,7 +56,7 @@ document.getElementById("join").onclick = function () {
             })
 
             localStream.init(function() {
-                localStream.play("selfStream")
+                localStream.play("SelfStream")
                 console.log('App id: ${appId}\nChannel id: ${channelName}')
                 client.publish(localStream)
             })
@@ -69,10 +70,10 @@ document.getElementById("join").onclick = function () {
     })
     
     client.on("stream-subscribed", function (evt) {
-        console.log("Stream Subscribed")
-        let stream = evt.stream
-        addVideoStream(stream.getId())
-        stream.play(stream.getId())
+        console.log("Stream Subscribed");
+        let stream = evt.stream;
+        addVideoStream(stream.getId());
+        stream.play(stream.getId());
     })
 
     client.on("peer-leave", function (evt) {
@@ -85,8 +86,8 @@ document.getElementById("leave").onclick = function () {
     client.leave(function() {
         console.log("Exited")
     }, handleFail)
-    removeMyVideoStream()
-}
+    removeMyVideoStream();
+} 
 
 document.getElementById("video-mute").onclick = function(){
     if(!videoMuted) {
