@@ -2,7 +2,7 @@ let handleFail = function(err){
     console.log(err)
 }
 
-let appId = "40fb1c82e7b84b5c94fbe7805b4f1761"
+let appId = "0e3ccb29d66043c589dd9404222aaced";
 let globalStream;
 let audioMuted = false;
 let videoMuted = false;
@@ -12,7 +12,7 @@ let client = AgoraRTC.createClient({
     codec: "h264"
 })
 
-client.init(appId, () => console.log("Client Connected"), handleFail)
+client.init(appId, () => console.log("Agora RTC Client Connected"), handleFail)
 
 function removeMyVideoStream() {
     globalStream.stop();
@@ -37,14 +37,7 @@ function addVideoStream(streamId){
 document.getElementById("join").onclick = function () {
     let channelName = document.getElementById("channelName").value;
     let username = document.getElementById("user").value;
-    
-    /*let tutorialContainer = document.getElementById("tutorial-pane")
-    let tutorial = document.createElement("iframe")
-    tutorial.width = "700vw"
-    tutorial.height = "400vh"
-    tutorial.src = "https://www.youtube.com/embed/nf8ySuesAPg"
-    tutorial.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    tutorialContainer.appendChild(tutorial); */
+
     client.join(
         null,
         channelName,
@@ -56,10 +49,12 @@ document.getElementById("join").onclick = function () {
             })
 
             localStream.init(function() {
+                //stream issue that i cannot figure out?? 
                 localStream.play("SelfStream")
-                console.log('App id: ${appId}\nChannel id: ${channelName}')
+                console.log(`App id: ${appId}\nChannel id: ${channelName}`)
                 client.publish(localStream)
             })
+
             globalStream = localStream;
         }
     )
@@ -109,7 +104,4 @@ document.getElementById("audio-mute").onclick = function() {
         globalStream.unmuteAudio();
         audioMuted = false;
     }
-}
-
-
-
+} 
